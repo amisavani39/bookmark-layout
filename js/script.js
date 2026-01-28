@@ -29,12 +29,12 @@ function toggleFaqNew(el) {
 }
 
 // mobile menu
-function openMenu() {
-  document.getElementById("mobileMenu").style.display = "flex";
+function openMenu(){
+  document.getElementById("mobileMenu").style.display="flex";
 }
 
-function closeMenu() {
-  document.getElementById("mobileMenu").style.display = "none";
+function closeMenu(){
+  document.getElementById("mobileMenu").style.display="none";
 }
 
 // bookmark
@@ -49,3 +49,24 @@ function addBookmark() {
   alert("Bookmark saved successfully!");
 }
 
+const form = document.getElementById('newsletterForm');
+const emailInput = document.getElementById('emailInput');
+const wrapper = document.getElementById('inputWrapper');
+
+form.addEventListener('submit', (e) => {
+  // Simple email pattern check
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(emailInput.value)) {
+    e.preventDefault(); // Stop the form from sending
+    wrapper.classList.add('is-invalid'); // Show the red error UI
+  } else {
+    wrapper.classList.remove('is-invalid'); // Clear UI if valid
+    alert('Subscription successful!');
+  }
+});
+
+// Remove the red box as soon as the user starts correcting the email
+emailInput.addEventListener('input', () => {
+  wrapper.classList.remove('is-invalid');
+});

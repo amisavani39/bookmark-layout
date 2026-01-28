@@ -1,228 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>title</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8" />
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <img>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/logo-bookmark.svg" alt="" />
+      </div>
 
-        <!-- navbar -->
-        <header class="navbar">
-            
-            <div class="logo">
-                <img src="images/logo-bookmark.svg" alt="">
-            </div>
+      <nav>
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#">CONTACT</a>
+        <button class="login-btn">LOGIN</button>
+      </nav>
 
-            <nav>
-                <a href="#">FEATURES</a>
-                <a href="#">PRICING</a>
-                <a href="#">CONTACT</a>
-                <button class="login-btn">LOGIN</button>
-            </nav>
-            <!-- mobile icon -->
-                <div class="menu-icon" onclick="openMenu()">☰</div>
-        </header>
+      <div class="menu-icon" onclick="openMenu()">
+        <img src="images/icon-hamburger.svg">
+      </div>
+    </header>
 
-        <!-- mobile menu -->
-            <div class="mobile-menu" id="mobileMenu">
-             <div class="mobile-header">
-                <span onclick="closeMenu()">✖</span>
-            </div>
+    <!-- bookmark -->
+  <div class="mobile-menu" id="mobileMenu">
 
-                <a href="#">FEATURES</a>
-                <a href="#">PRICING</a>
-                <a href="#">CONTACT</a>
-                <button class="mobile-login">LOGIN</button>
-            </div>
+  <div class="mobile-header">
+    <img src="images/logo-bookmark.svg">
+    <img src="images/icon-close.svg" onclick="closeMenu()" class="close">
+  </div>
 
-        <!-- hero secation -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1>A Simple Bookmark Manager</h1>
-                <p>
-                    A clean and simple interface to organize your favourite
-                    websites.
-                    Open a new browser tab and see your sites load instantly.
-                </p>
+  <a href="#">FEATURES</a>
+  <a href="#">PRICING</a>
+  <a href="#">CONTACT</a>
 
-                <div class="hero-buttons">
-                    <button class="btn-primary" onclick="addBookmark()">Bookmark This Page</button>
-                    <button class="btn-secondary">Get it on Firefox</button>
-                </div>
-            </div>
+  <button class="mobile-login">LOGIN</button>
 
-            <div class="hero-image">
-                <div class="blue-bg"></div>
-                <img src="images/illustration-hero.svg" alt="App Preview">
-            </div>
-        </section>
+  <div class="mobile-social">
+    <img src="images/icon-facebook.svg">
+    <img src="images/icon-twitter.svg">
+  </div>
 
-        <section class="feat-wrap">
-            <h2 class="feat-title">Features</h2>
-            <p class="feat-desc">
-                Our aim is to make it quick and easy to access favourite
-                websites.<br>
-                Open new browser tab and see your sites load instantly.
-            </p>
+</div>
+    
+    <!-- hero secation -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>A Simple Bookmark Manager</h1>
+        <p>
+          A clean and simple interface to organize your favourite websites. Open
+          a new browser tab and see your sites load instantly.
+        </p>
 
-            <!-- hero-tab -->
-            <div class="feat-tabs">
-                <button class="feat-tab active-tab"onclick="switchFeature(0)">Simple Bookmarking</button>
-                <button class="feat-tab" onclick="switchFeature(1)">Speedy Searching</button>
-                <button class="feat-tab" onclick="switchFeature(2)">Easy Sharing</button>
-            </div>
-
-            <!-- Tab 1 -->
-            <div class="feat-content show">
-                <div class="feat-box">
-                    <div class="feat-image">
-                        <div class="feat-bg"></div>
-                        <img src="images/illustration-features-tab-1.svg">
-                    </div>
-
-                    <div class="feat-text">
-                        <h3>Bookmark in one click</h3>
-                        <p>
-                            Organize your bookmarks however you like.
-                            Our simple drag-and-drop interface gives you
-                            complete control.
-                        </p>
-                        <button class="feat-btn">More Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab 2 -->
-            <div class="feat-content">
-                <div class="feat-box">
-                    <div class="feat-image">
-                        <div class="feat-bg"></div>
-                        <img src="images/illustration-features-tab-2.svg">
-                    </div>
-
-                    <div class="feat-text">
-                        <h3>Powerful search</h3>
-                        <p>Find saved websites instantly using smart search.</p>
-                        <button class="feat-btn">More Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab 3 -->
-            <div class="feat-content">
-                <div class="feat-box">
-                    <div class="feat-image">
-                        <div class="feat-bg"></div>
-                        <img src="images/illustration-features-tab-3.svg">
-                    </div>
-
-                    <div class="feat-text">
-                        <h3>Easy sharing</h3>
-                        <p>Share your bookmarks and collections with others.</p>
-                        <button class="feat-btn">More Info</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--card-->
-        <section class="ext-wrap">
-            <h2 class="ext-title">Download the extension</h2>
-            <p class="ext-subtitle">
-                We've got more browsers in the pipeline. Please do let us know
-                if<br>
-                you've got a favourite you'd like us to prioritize.
-            </p>
-
-            <div class="ext-cards">
-
-                <div class="ext-card">
-                    <img src="images/logo-chrome.svg">
-                    <h3>Add to Chrome</h3>
-                    <p>Minimum version 62</p>
-                    <button class="ext-btn">Add & Install Extension</button>
-                </div>
-
-                <div class="ext-card ext-offset">
-                    <img src="images/logo-firefox.svg">
-                    <h3>Add to Firefox</h3>
-                    <p>Minimum version 55</p>
-                    <button class="ext-btn">Add & Install Extension</button>
-                </div>
-
-                <div class="ext-card ext-offset-more">
-                    <img src="images/logo-opera.svg">
-                    <h3>Add to Opera</h3>
-                    <p>Minimum version 46</p>
-                    <button class="ext-btn">Add & Install Extension</button>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="faq-wrap-new">
-
-            <h2 class="faq-head-new">Frequently Asked Questions</h2>
-                <p class="faq-sub-new">
-                    We've got more browsers in the pipeline. Curious about the rest?
-                </p>
-
-            <div class="faq-box-new">
-
-            <div class="faq-item-new">
-                <button class="faq-q-new" onclick="toggleFaqNew(this)">
-                     What is Bookmark?
-                    <span class="faq-icon-new">+</span>
-                </button>
-                    <div class="faq-a-new">
-                        Bookmark is a simple tool to save and manage your favourite websites easily.
-                    </div>
-            </div>
-
-            <div class="faq-item-new">
-                <button class="faq-q-new" onclick="toggleFaqNew(this)">
-                    How can I request a new feature?
-                    <span class="faq-icon-new">+</span>
-                </button>
-                <div class="faq-a-new">
-                    You can request new features by contacting our support team anytime.
-                </div>
-            </div>
-
-            <div class="faq-item-new">
-                <button class="faq-q-new" onclick="toggleFaqNew(this)">
-                    Is there a mobile app?
-                    <span class="faq-icon-new">+</span>
-                </button>
-                <div class="faq-a-new">
-                    Currently, there is no mobile app available.
-                </div>
-             </div>
-
-            <div class="faq-item-new">
-                <button class="faq-q-new" onclick="toggleFaqNew(this)">
-                    What about other browsers?
-                    <span class="faq-icon-new">+</span>
-                </button>
-            <div class="faq-a-new">
-                More browser extensions are coming soon.
-            </div>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="addBookmark()">
+            Bookmark This Page
+          </button>
+          <button class="btn-secondary">Get it on Firefox</button>
         </div>
+      </div>
 
-        </div>
-
-        <button class="faq-btn-new">Contact Us</button>
-
+      <div class="hero-image">
+        <div class="blue-bg"></div>
+        <img src="images/illustration-hero.svg" alt="App Preview" />
+      </div>
     </section>
 
-    <!-- bule strip -->
-    <section class="blue-strip-new">
-        <p class="blue-small-new">35,000+ ALREADY JOINED</p>
-        <h3 class="blue-title-new">Stay up-to-date with what we're doing</h3>
+    <section class="feat-wrap">
+      <h2 class="feat-title">Features</h2>
+      <p class="feat-desc">
+        Our aim is to make it quick and easy to access favourite websites.<br />
+        Open new browser tab and see your sites load instantly.
+      </p>
+
+      <!-- hero-tab -->
+      <div class="feat-tabs">
+        <button class="feat-tab active-tab" onclick="switchFeature(0)">
+          Simple Bookmarking
+        </button>
+        <button class="feat-tab" onclick="switchFeature(1)">
+          Speedy Searching
+        </button>
+        <button class="feat-tab" onclick="switchFeature(2)">
+          Easy Sharing
+        </button>
+      </div>
+
+      <!-- Tab 1 -->
+      <div class="feat-content show">
+        <div class="feat-box">
+          <div class="feat-image">
+            <div class="feat-bg"></div>
+            <img src="images/illustration-features-tab-1.svg" />
+          </div>
+
+          <div class="feat-text">
+            <h3>Bookmark in one click</h3>
+            <p>
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control.
+            </p>
+            <button class="feat-btn">More Info</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2 -->
+      <div class="feat-content">
+        <div class="feat-box">
+          <div class="feat-image">
+            <div class="feat-bg"></div>
+            <img src="images/illustration-features-tab-2.svg" />
+          </div>
+
+          <div class="feat-text">
+            <h3>Powerful search</h3>
+            <p>Find saved websites instantly using smart search.</p>
+            <button class="feat-btn">More Info</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3 -->
+      <div class="feat-content">
+        <div class="feat-box">
+          <div class="feat-image">
+            <div class="feat-bg"></div>
+            <img src="images/illustration-features-tab-3.svg" />
+          </div>
+
+          <div class="feat-text">
+            <h3>Easy sharing</h3>
+            <p>Share your bookmarks and collections with others.</p>
+            <button class="feat-btn">More Info</button>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!--card-->
+    <section class="ext-wrap">
+      <h2 class="ext-title">Download the extension</h2>
+      <p class="ext-subtitle">
+        We've got more browsers in the pipeline. Please do let us know if<br />
+        you've got a favourite you'd like us to prioritize.
+      </p>
 
-        <script src="js/script.js"></script>
-    </body>
+      <div class="ext-cards">
+        <div class="ext-card">
+          <img src="images/logo-chrome.svg" />
+          <h3>Add to Chrome</h3>
+          <p>Minimum version 62</p>
+          <button class="ext-btn">Add & Install Extension</button>
+        </div>
+
+        <div class="ext-card ext-offset">
+          <img src="images/logo-firefox.svg" />
+          <h3>Add to Firefox</h3>
+          <p>Minimum version 55</p>
+          <button class="ext-btn">Add & Install Extension</button>
+        </div>
+
+        <div class="ext-card ext-offset-more">
+          <img src="images/logo-opera.svg" />
+          <h3>Add to Opera</h3>
+          <p>Minimum version 46</p>
+          <button class="ext-btn">Add & Install Extension</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-wrap-new">
+      <h2 class="faq-head-new">Frequently Asked Questions</h2>
+      <p class="faq-sub-new">
+        We've got more browsers in the pipeline. Curious about the rest?
+      </p>
+
+      <div class="faq-box-new">
+        <div class="faq-item-new">
+          <button class="faq-q-new" onclick="toggleFaqNew(this)">
+            What is Bookmark?
+            <span class="faq-icon-new">+</span>
+          </button>
+          <div class="faq-a-new">
+            Bookmark is a simple tool to save and manage your favourite websites
+            easily.
+          </div>
+        </div>
+
+        <div class="faq-item-new">
+          <button class="faq-q-new" onclick="toggleFaqNew(this)">
+            How can I request a new feature?
+            <span class="faq-icon-new">+</span>
+          </button>
+          <div class="faq-a-new">
+            You can request new features by contacting our support team anytime.
+          </div>
+        </div>
+
+        <div class="faq-item-new">
+          <button class="faq-q-new" onclick="toggleFaqNew(this)">
+            Is there a mobile app?
+            <span class="faq-icon-new">+</span>
+          </button>
+          <div class="faq-a-new">
+            Currently, there is no mobile app available.
+          </div>
+        </div>
+
+        <div class="faq-item-new">
+          <button class="faq-q-new" onclick="toggleFaqNew(this)">
+            What about other browsers?
+            <span class="faq-icon-new">+</span>
+          </button>
+          <div class="faq-a-new">More browser extensions are coming soon.</div>
+        </div>
+      </div>
+
+      <button class="faq-btn-new">Contact Us</button>
+    </section>
+    <section class="cta">
+
+      <p class="cta-small">35,000+ ALREADY JOINED</p>
+
+        <h2>Stay up-to-date with what<h2>we’re doing</h2>
+        <form id="newsletterForm" novalidate>
+  <div class="input-wrapper" id="inputWrapper">
+    <input type="email" id="emailInput" placeholder="Enter your email address">
+    <div class="error-banner">Whoops, make sure it's an email</div>
+    <span class="error-icon">!</span>
+  </div>
+  <button type="submit">Contact Us</button>
+</form>
+  </section>
+  
+
+
+    <footer>
+  <div class="footer-container">
+    
+    <div class="left-side">
+      <div class="logo-group">
+        <div class="icon-circle">
+          <div class="bookmark-shape"></div>
+        </div>
+        <span class="logo-text">BOOKMARK</span>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#">CONTACT</a>
+      </nav>
+    </div>
+
+    <div class="social-icons">
+      <img src="images/icon-facebook.svg">
+      <img src="images/icon-twitter.svg">
+    </div>
+
+  </div>
+</footer>
+
+    <script src="js/script.js"></script>
+  </div>
 </html>
